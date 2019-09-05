@@ -1,0 +1,30 @@
+#must choice 'mysql57' or 'mysql'
+[mysql_version]
+mysql
+
+#must choice 'single' or 'high'
+[mysql_deploy_way]
+single
+
+#must choice 'yes' or 'no'
+[promethues]
+yes
+
+[mysql01]
+172.21.0.21
+
+[mysql02]
+172.21.0.20
+
+[VIP_1]
+172.21.0.31
+
+[mysql_port]
+3306
+
+[mysql_usrname_password]
+P@ssw0rd
+
+
+
+

@@ -1,0 +1,11 @@
+---
+
+ - hosts: mysql02 
+   roles:
+   - role: "mysql-yum"
+     mysql_usr_name: {name: '21v', password: 'P@ssw0rd'}
+     #output_choice: true
+     mysql_host_ip: "{{ inventory_hostname }}"
+     mysql_deployment_mode: "Single mode"
+     #mysql_datadir_path: "/data/mysql"
+     mysql_version: "8.0.17"

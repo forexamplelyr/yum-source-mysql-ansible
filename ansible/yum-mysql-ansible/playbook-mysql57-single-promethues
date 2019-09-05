@@ -1,0 +1,18 @@
+---
+
+ - hosts: mysql02 
+   roles:
+   - role: "mysql-yum"
+     mysql_usr_name: {name: '21v', password: 'P@ssw0rd'}
+     #output_choice: true
+     mysql_host_ip: "{{ inventory_hostname }}"
+     mysql_deployment_mode: "Single mode"
+     #mysql_datadir_path: "/data/mysql"
+     mysql_version: "5.7.27"
+
+ - hosts: mysql02
+   roles:
+   - role: "mysql-promethus-client"
+     promethues_exporter_from_source: false
+     mysql_usr_name: {name: '21v', password: 'P@ssw0rd'}
+     mysql_monitor_user: {name: 'monitor', password: 'P@ssw0rd'}   
